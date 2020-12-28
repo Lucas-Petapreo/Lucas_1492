@@ -1,0 +1,42 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f491b0b5ff6, pid=4086, tid=4117
+#
+# JRE version: OpenJDK Runtime Environment (11.0.6+8) (build 11.0.6+8-b520.66)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+8-b520.66, mixed mode, tiered, compressed oops, concurrent mark sweep gc, linux-amd64)
+# Problematic frame:
+# C  [libc.so.6+0x42ff6]
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -XX:CICompilerCount=2 -Dsun.io.useCanonPrefixCache=false -Djava.net.preferIPv4Stack=true -Djdk.http.auth.tunneling.disabledSchemes="" -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djdk.attach.allowAttachSelf=true -Dkotlinx.coroutines.debug=off -Djdk.module.illegalAccess.silent=true -Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine -Dsun.tools.attach.tmp.only=true -javaagent:/home/j/.jetbrains/jetbrains-agent-v3.2.0.de72.619 -XX:ErrorFile=/home/j/java_error_in_PYCHARM_%p.log -XX:HeapDumpPath=/home/j/java_error_in_PYCHARM.hprof -Didea.paths.selector=PyCharm2019.3 -Djb.vmOptionsFile=/home/j/.PyCharm2019.3/config/pycharm64.vmoptions -Didea.platform.prefix=Python com.intellij.idea.Main
+
+Host: Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz, 4 cores, 3G, Ubuntu 18.04.3 LTS
+Time: Tue Jun 16 20:01:50 2020 CST elapsed time: 56891 seconds (0d 15h 48m 11s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f48a4243800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=4117, stack(0x00007f4892ae4000,0x00007f4892be5000)]
+
+Stack: [0x00007f4892ae4000,0x00007f4892be5000],  sp=0x00007f4892be32c0,  free space=1020k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x42ff6]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.X11.XlibWrapper.XGetInputFocus(J)J+0 java.desktop@11.0.6
+j  sun.awt.X11.XBaseWindow.xGetInputFocus()J+6 java.desktop@11.0.6
+j  sun.awt.X11.XWindowPeer.getNativeFocusedWindowPeer()Lsun/awt/X11/XWindowPeer;+0 java.desktop@11.0.6
+j  sun.awt.X11.XWindowPeer.handleFocusEvent(Lsun/awt/X11/XEvent;)V+107 java.desktop@11.0.6
+j  sun.awt.X11.XDecoratedPeer.handleFocusEvent(Lsun/awt/X11/XEvent;)V+2 java.desktop@11.0.6
+j  sun.awt.X11.XFocusProxyWindow.handleFocusEvent(Lsun/awt/X11/XEvent;)V+5 java.desktop@11.0.6
+J 54199 c2 sun.awt.X11.XFocusProxyWindow.dispatchEvent(Lsun/awt/X11/XEvent;)V java.desktop@11.0.6 (43 bytes) @ 0x00007f490b5cd95c [0x00007f490b5cd440+0x000000000000051c]
+J 28812 c2
