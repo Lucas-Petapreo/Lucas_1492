@@ -1,2 +1,1 @@
 Enter a Line.
-Num 1 Function.
